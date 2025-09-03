@@ -61,4 +61,18 @@ private:
 	PersistKVSerializer();
 };
 
+template <>
+class PersistKVSerializer<bool> {
+public:
+	static std::string serialize(const bool& obj) {
+		return obj ? "1" : "0";
+	}
+
+	static bool deserialize(const std::string& data) {
+		return data == "1";
+	}
+private:
+	PersistKVSerializer();
+};
+
 #endif

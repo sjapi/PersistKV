@@ -22,5 +22,11 @@ int main() {
 	std::string a6 = PersistKVSerializer<std::string>::deserialize(s_a);
 	assert(a5 == a6);
 
+	/* Bool */
+	bool a7 = false;
+	s_a = PersistKVSerializer<bool>::serialize(a7);
+	double a8 = PersistKVSerializer<double>::deserialize(s_a);
+	assert(a7 == a8);
+
 	return 0;
 }
