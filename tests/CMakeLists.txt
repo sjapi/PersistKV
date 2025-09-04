@@ -15,3 +15,12 @@ add_executable(serializer_test
 target_link_libraries(serializer_test PRIVATE persist_kv)
 
 add_test(NAME Serializer COMMAND serializer_test)
+
+# WAL tests
+add_executable(wal_test
+	wal_test.cpp
+)
+
+target_link_libraries(wal_test PRIVATE persist_kv)
+
+add_test(NAME WAL COMMAND wal_test)

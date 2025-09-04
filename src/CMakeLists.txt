@@ -2,6 +2,7 @@ add_library(persist_kv STATIC
 	PersistKV.cpp
 	PersistKV.h
 	Serializer.h
+	WAL.h
 	utils.cpp
 	utils.h
 )
